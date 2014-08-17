@@ -21,9 +21,9 @@ func main() {
 	memStats := &runtime.MemStats{}
 	start := time.Now()
 	loops := 999999
-	fmt.Println("No concurency or paralelism will be used")
+	fmt.Println("go routines concurency will be used")
 	for i := 0; i < loops; i++ {
-		Sqrt(float64(i))
+		go Sqrt(float64(i))
 	}
 	runtime.ReadMemStats(memStats)
 	fmt.Printf("%d loops in %s\n", loops, time.Since(start))
