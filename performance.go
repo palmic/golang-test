@@ -15,7 +15,7 @@ func Sqrt(x float64) float64 {
 }
 
 func main() {
-	//runtime.GOMAXPROCS(runtime.NumCPU())
+	runtime.GOMAXPROCS(runtime.NumCPU())
 	fmt.Printf("%d cpus will be used\n", runtime.GOMAXPROCS(0))
 
 	memStats := &runtime.MemStats{}
